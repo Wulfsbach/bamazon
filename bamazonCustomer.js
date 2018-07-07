@@ -17,5 +17,12 @@ connection.connect(function (err){
 })
 
 function CustomerChoice(){
-    
+    inquirer.prompt({
+        name:'ProductNum',
+        type:'input',
+        message:"State the ID of the product ranging from 14-23."
+    },
+    {
+        name:''
+    })
 }
