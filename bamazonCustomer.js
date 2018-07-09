@@ -17,12 +17,22 @@ connection.connect(function (err){
 })
 
 function CustomerChoice(){
-    inquirer.prompt({
+    inquirer.prompt([{
         name:'ProductNum',
         type:'input',
         message:"State the ID of the product ranging from 14-23."
     },
     {
-        name:''
+        name:'Amount',
+        type:'input',
+        message: "Please state the amount you wish to purchase."
+    }
+    ]) .then(function (statement) {
+        var ProductNum = statement.ProductNum
+        var amount = answer.amount
+
+        var query = "SELECT * FROM bamazon"
+        query += "WHERE item_id= " +
     })
+    
 }
